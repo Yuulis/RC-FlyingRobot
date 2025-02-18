@@ -30,16 +30,16 @@
 #define _XTAL_FREQ 1000000
 
 void main(void) {
-    TRISA = 0b00100000;
+    TRISA = 0b00100001;
     TRISB = 0b00000000;
     ANSELA = 0b00000000;
     ANSELB = 0b00000000;
     OSCCONbits.IRCF = 0b1011;   // 1MHz
 
     while(1){
-        RA0 = 1;            //RA0をONに
+        RA7 = 1;            //RA7をONに
         __delay_ms(500);    //500ms = 0.5s待つ
-        RA0 = 0;
+        RA7 = 0;
         __delay_ms(500);        
     }
     
