@@ -30,4 +30,6 @@ void main(void) {
             RA1 = 0; // LED OFF
         }
     }
+
+    return;
 }
